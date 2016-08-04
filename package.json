@@ -1,6 +1,6 @@
 {
   "name": "vfile-reporter-pretty",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pretty reporter for VFile",
   "license": "MIT",
   "repository": "sindresorhus/vfile-reporter-pretty",
