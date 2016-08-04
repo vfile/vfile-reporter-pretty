@@ -1,0 +1,45 @@
+{
+  "name": "vfile-reporter-pretty",
+  "version": "0.0.0",
+  "description": "Pretty reporter for VFile",
+  "license": "MIT",
+  "repository": "sindresorhus/vfile-reporter-pretty",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "vfile",
+    "reporter",
+    "remark",
+    "lint",
+    "formatter",
+    "lint",
+    "eslint",
+    "validate",
+    "pretty"
+  ],
+  "dependencies": {
+    "eslint-formatter-pretty": "^0.2.2",
+    "vfile-to-eslint": "^0.1.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "remark": "^5.0.1",
+    "remark-lint": "^4.1.0",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
