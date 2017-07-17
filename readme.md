@@ -17,13 +17,19 @@ $ npm install --save vfile-reporter-pretty
 ## Usage
 
 ```js
-const remark = require('remark');
-const remarkLint = require('remark-lint');
+const vfile = require('vfile');
 const vfileReporterPretty = require('vfile-reporter-pretty');
 
-const vfile = remark().use(remarkLint).process('## Hello world!');
+const file = vfile({path: '~/example.md'});
 
-console.log(vfileReporterPretty([vfile]));
+file.message('`braavo` is misspelt; did you mean `bravo`?', {line: 1, column: 8});
+file.info('This is perfect', {line: 2, column: 1});
+
+try {
+	file.fail('This is horrible', {line: 3, column: 5});
+} catch (err) {}
+
+console.log(vfileReporterPretty([file]));
 ```
 
 
