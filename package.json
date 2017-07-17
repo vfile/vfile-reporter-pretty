@@ -30,13 +30,12 @@
     "pretty"
   ],
   "dependencies": {
-    "eslint-formatter-pretty": "^0.2.2",
-    "vfile-to-eslint": "^0.1.0"
+    "eslint-formatter-pretty": "^1.1.0",
+    "vfile-to-eslint": "^1.0.0"
   },
   "devDependencies": {
     "ava": "*",
-    "remark": "^5.0.1",
-    "remark-lint": "^4.1.0",
+    "vfile": "^2.2.0",
     "xo": "*"
   },
   "xo": {
