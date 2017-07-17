@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Pretty reporter for VFile",
   "license": "MIT",
-  "repository": "sindresorhus/vfile-reporter-pretty",
+  "repository": "vfile/vfile-reporter-pretty",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",

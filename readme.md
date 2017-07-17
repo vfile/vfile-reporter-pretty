@@ -1,4 +1,4 @@
-# vfile-reporter-pretty [![Build Status](https://travis-ci.org/sindresorhus/vfile-reporter-pretty.svg?branch=master)](https://travis-ci.org/sindresorhus/vfile-reporter-pretty)
+# vfile-reporter-pretty [![Build Status](https://travis-ci.org/vfile/vfile-reporter-pretty.svg?branch=master)](https://travis-ci.org/vfile/vfile-reporter-pretty)
 
 > Pretty reporter for [VFile](https://github.com/vfile/vfile)
 
