@@ -1,6 +1,6 @@
 # vfile-reporter-pretty [![Build Status](https://travis-ci.org/sindresorhus/vfile-reporter-pretty.svg?branch=master)](https://travis-ci.org/sindresorhus/vfile-reporter-pretty)
 
-> Pretty reporter for [VFile](https://github.com/wooorm/vfile)
+> Pretty reporter for [VFile](https://github.com/vfile/vfile)
 
 For example, get pretty output from [remark-lint](https://github.com/wooorm/remark-lint).
 
