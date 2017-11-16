@@ -3,7 +3,7 @@ import vfile from 'vfile';
 import m from './';
 
 /* https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93 */
-const cwd = process.env.CI ? '' : '\u001b]50;CurrentDir=/Users/tilde/projects/oss/vfile-reporter-pretty\u0007';
+const cwd = process.env.CI ? '' : '\u001b]50;CurrentDir=' + process.cwd() + '\u0007';
 
 test(t => {
 	const file = vfile({path: '~/example.md'});
