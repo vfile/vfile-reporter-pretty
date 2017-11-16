@@ -19,7 +19,7 @@ test(t => {
 		m([file]),
 		[
 			'',
-			cwd + '  \u001b[4m~/example.md\u001b[8m\u001b[2m\u001b[90m:1:8\u001b[39m\u001b[22m\u001b[28m\u001b[24m',
+			cwd + '  \u001b[4m~/example.md\u001b[24m\u001b[8m\u001b[2m\u001b[90m:1:8\u001b[39m\u001b[22m\u001b[28m',
 			'  \u001b[33m⚠\u001b[39m  \u001b[2m1\u001b[90m:\u001b[39m8\u001b[22m  \u001b[1mbraavo\u001b[22m is misspelt; did you mean \u001b[1mbravo\u001b[22m?  ',
 			'  \u001b[33m⚠\u001b[39m  \u001b[2m2\u001b[90m:\u001b[39m1\u001b[22m  This is perfect                          ',
 			'  \u001b[31m✖\u001b[39m  \u001b[2m3\u001b[90m:\u001b[39m5\u001b[22m  This is horrible                         ',
