@@ -33,6 +33,13 @@ console.log(vfileReporterPretty([file]));
 ```
 
 
+## Contribute
+
+See [`contribute.md` in `vfile/vfile`](https://github.com/vfile/vfile/blob/master/contributing.md) for ways to get started.
+
+This organisation has a [Code of Conduct](https://github.com/vfile/vfile/blob/master/code-of-conduct.md).  By interacting with this repository, organisation, or community you agree to abide by its terms.
+
+
 ## License
 
 MIT © [Sindre Sorhus](https://sindresorhus.com)
