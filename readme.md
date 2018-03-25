@@ -10,7 +10,7 @@ For example, get pretty output from [remark-lint](https://github.com/wooorm/rema
 ## Install
 
 ```
-$ npm install --save vfile-reporter-pretty
+$ npm install vfile-reporter-pretty
 ```
 
 
@@ -37,7 +37,7 @@ console.log(vfileReporterPretty([file]));
 
 See [`contribute.md` in `vfile/vfile`](https://github.com/vfile/vfile/blob/master/contributing.md) for ways to get started.
 
-This organisation has a [Code of Conduct](https://github.com/vfile/vfile/blob/master/code-of-conduct.md).  By interacting with this repository, organisation, or community you agree to abide by its terms.
+This organisation has a [Code of Conduct](https://github.com/vfile/vfile/blob/master/code-of-conduct.md). By interacting with this repository, organization, or community, you agree to abide by its terms.
 
 
 ## License
