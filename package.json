@@ -4,11 +4,11 @@
   "description": "Pretty reporter for VFile",
   "license": "MIT",
   "repository": "vfile/vfile-reporter-pretty",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+  "contributors": [
+    "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
   "engines": {
     "node": ">=4"
   },
