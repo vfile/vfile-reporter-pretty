@@ -13,7 +13,7 @@ test(t => {
 
 	try {
 		file.fail('This is horrible', {line: 3, column: 5});
-	} catch (err) {}
+	} catch (error) {}
 
 	t.is(
 		m([file]),
