@@ -3,21 +3,6 @@
   "version": "1.0.2",
   "description": "Pretty reporter for VFile",
   "license": "MIT",
-  "repository": "vfile/vfile-reporter-pretty",
-  "author": "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
-  "contributors": [
-    "Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
-    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
-  ],
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
   "keywords": [
     "vfile",
     "reporter",
@@ -29,16 +14,55 @@
     "validate",
     "pretty"
   ],
+  "repository": "vfile/vfile-reporter-pretty",
+  "bugs": "https://github.com/vfile/vfile-reporter-pretty/issues",
+  "author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+  "contributors": [
+    "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "eslint-formatter-pretty": "^1.1.0",
     "vfile-to-eslint": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "*",
+    "ava": "^0.25.0",
+    "nyc": "^13.1.0",
+    "prettier": "^1.14.3",
+    "remark-cli": "^6.0.0",
+    "remark-preset-wooorm": "^4.0.0",
     "vfile": "^3.0.0",
-    "xo": "*"
+    "xo": "^0.23.0"
+  },
+  "scripts": {
+    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+    "test-api": "ava",
+    "test-coverage": "nyc --reporter lcov ava test.js",
+    "test": "npm run format && npm run test-coverage"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
   },
   "xo": {
-    "esnext": true
+    "prettier": true
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
