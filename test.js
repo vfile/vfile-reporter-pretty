@@ -33,7 +33,7 @@ test(t => {
       cwd +
         '  \u001B[4m~/example.md\u001B[24m\u001B[8m\u001B[2m\u001B[90m:5:3\u001B[39m\u001B[22m\u001B[28m',
       '  \u001B[33m⚠\u001B[39m  \u001B[2m3\u001B[90m:\u001B[39m5\u001B[22m  This should be fixed  ',
-      '  \u001B[33m⚠\u001B[39m  \u001B[2m5\u001B[90m:\u001B[39m3\u001B[22m  This is perfect       \u001B[90m\u001B[2malpha:bravo\u001B[22m\u001B[39m',
+      '  \u001B[33m⚠\u001B[39m  \u001B[2m5\u001B[90m:\u001B[39m3\u001B[22m  This is perfect       \u001B[2malpha:bravo\u001B[22m',
       '  \u001B[31m✖\u001B[39m  \u001B[2m2\u001B[90m:\u001B[39m1\u001B[22m  This is horrible      ',
       '',
       '  \u001B[33m2 warnings\u001B[39m',
