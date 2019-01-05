@@ -1,5 +1,7 @@
 import test from 'ava'
 import vfile from 'vfile'
+import symbols from 'log-symbols'
+import chalk from 'chalk'
 import m from '.'
 
 // https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93
@@ -31,13 +33,27 @@ test(t => {
     [
       '',
       cwd +
-        '  \u001B[4m~/example.md\u001B[24m\u001B[8m\u001B[2m\u001B[90m:5:3\u001B[39m\u001B[22m\u001B[28m',
-      '  \u001B[33m⚠\u001B[39m  \u001B[2m3\u001B[90m:\u001B[39m5\u001B[22m  This should be fixed  ',
-      '  \u001B[33m⚠\u001B[39m  \u001B[2m5\u001B[90m:\u001B[39m3\u001B[22m  This is perfect       \u001B[2malpha:bravo\u001B[22m',
-      '  \u001B[31m✖\u001B[39m  \u001B[2m2\u001B[90m:\u001B[39m1\u001B[22m  This is horrible      ',
+        '  ' +
+        chalk.underline('~/example.md') +
+        chalk.hidden.dim.gray(':5:3'),
+      '  ' +
+        symbols.warning +
+        '  ' +
+        chalk.dim('3' + chalk.gray(':') + '5') +
+        '  This should be fixed  ',
+      '  ' +
+        symbols.warning +
+        '  ' +
+        chalk.dim('5' + chalk.gray(':') + '3') +
+        '  This is perfect       \u001B[2malpha:bravo\u001B[22m',
+      '  ' +
+        symbols.error +
+        '  ' +
+        chalk.dim('2' + chalk.gray(':') + '1') +
+        '  This is horrible      ',
       '',
-      '  \u001B[33m2 warnings\u001B[39m',
-      '  \u001B[31m1 error\u001B[39m',
+      '  ' + chalk.yellow('2 warnings'),
+      '  ' + chalk.red('1 error'),
       ''
     ].join('\n')
   )
