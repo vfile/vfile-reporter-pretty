@@ -10,7 +10,7 @@ const cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
 test(t => {
   const fp = path.join('~', 'example.md')
-  const file = vfile(fp)
+  const file = vfile({path: fp})
 
   file.info('This is perfect', {line: 5, column: 3}, 'alpha:bravo')
 
