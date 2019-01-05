@@ -1,3 +1,4 @@
+import path from 'path'
 import test from 'ava'
 import vfile from 'vfile'
 import symbols from 'log-symbols'
@@ -8,7 +9,8 @@ import m from '.'
 const cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
 test(t => {
-  const file = vfile({path: '~/example.md'})
+  const fp = path.join('~', 'example.md')
+  const file = vfile(fp)
 
   file.info('This is perfect', {line: 5, column: 3}, 'alpha:bravo')
 
@@ -32,10 +34,7 @@ test(t => {
     m([file]),
     [
       '',
-      cwd +
-        '  ' +
-        chalk.underline('~/example.md') +
-        chalk.hidden.dim.gray(':5:3'),
+      cwd + '  ' + chalk.underline(fp) + chalk.hidden.dim.gray(':5:3'),
       '  ' +
         symbols.warning +
         '  ' +
@@ -45,7 +44,8 @@ test(t => {
         symbols.warning +
         '  ' +
         chalk.dim('5' + chalk.gray(':') + '3') +
-        '  This is perfect       \u001B[2malpha:bravo\u001B[22m',
+        '  This is perfect       ' +
+        chalk.dim('alpha:bravo'),
       '  ' +
         symbols.error +
         '  ' +
