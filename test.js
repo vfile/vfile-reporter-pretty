@@ -8,7 +8,7 @@ import m from '.'
 // https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93
 const cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
-test(t => {
+test('main', t => {
   const fp = path.join('~', 'example.md')
   const file = vfile({path: fp})
 
@@ -34,7 +34,7 @@ test(t => {
     m([file]),
     [
       '',
-      cwd + '  ' + chalk.underline(fp) + chalk.hidden.dim.gray(':5:3'),
+      cwd + '  ' + chalk.underline(fp) + chalk.hidden.dim.gray(':2:1'),
       '  ' +
         symbols.warning +
         '  ' +
