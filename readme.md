@@ -7,9 +7,7 @@
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-Pretty reporter for [vfile][].
-
-For example, get pretty output from [remark-lint][].
+Create a pretty report for a **[vfile][]**.
 
 ![][screenshot]
 
@@ -21,7 +19,7 @@ For example, get pretty output from [remark-lint][].
 npm install vfile-reporter-pretty
 ```
 
-## Usage
+## Use
 
 ```js
 const vfile = require('vfile')
@@ -53,8 +51,8 @@ See [`contributing.md`][contributing] in [`vfile/.github`][health] for ways to
 get started.
 See [`support.md`][support] for ways to get help.
 
-This project has a [Code of Conduct][coc].
-By interacting with this repository, organisation, or community you agree to
+This project has a [code of conduct][coc].
+By interacting with this repository, organization, or community you agree to
 abide by its terms.
 
 ## License
@@ -81,7 +79,7 @@ abide by its terms.
 
 [collective]: https://opencollective.com/unified
 
-[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
 
 [chat]: https://spectrum.chat/unified/vfile
 
@@ -100,7 +98,5 @@ abide by its terms.
 [author]: https://sindresorhus.com
 
 [screenshot]: screenshot.png
-
-[remark-lint]: https://github.com/remarkjs/remark-lint
 
 [vfile]: https://github.com/vfile/vfile
