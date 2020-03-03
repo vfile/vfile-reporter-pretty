@@ -37,20 +37,20 @@
     "vfile-to-eslint": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^3.0.0",
     "chalk": "^3.0.0",
     "log-symbols": "^3.0.0",
     "nyc": "^15.0.0",
     "prettier": "^1.0.0",
     "remark-cli": "^7.0.0",
     "remark-preset-wooorm": "^6.0.0",
+    "tape": "^4.0.0",
     "vfile": "^4.0.0",
     "xo": "^0.27.0"
   },
   "scripts": {
     "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
-    "test-api": "ava",
-    "test-coverage": "nyc --reporter lcov ava test.js",
+    "test-api": "node test",
+    "test-coverage": "nyc --reporter lcov node test.js",
     "test": "npm run format && npm run test-coverage"
   },
   "nyc": {
@@ -68,7 +68,8 @@
     "trailingComma": "none"
   },
   "xo": {
-    "prettier": true
+    "prettier": true,
+    "esnext": false
   },
   "remarkConfig": {
     "plugins": [
