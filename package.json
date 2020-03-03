@@ -33,7 +33,7 @@
     "index.js"
   ],
   "dependencies": {
-    "eslint-formatter-pretty": "^2.0.0",
+    "eslint-formatter-pretty": "^3.0.0",
     "vfile-to-eslint": "^2.0.0"
   },
   "devDependencies": {
