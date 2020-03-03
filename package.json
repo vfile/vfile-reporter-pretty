@@ -16,6 +16,10 @@
   ],
   "repository": "vfile/vfile-reporter-pretty",
   "bugs": "https://github.com/vfile/vfile-reporter-pretty/issues",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/unified"
+  },
   "author": "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
   "contributors": [
     "Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
