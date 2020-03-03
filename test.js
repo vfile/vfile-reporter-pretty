@@ -28,7 +28,7 @@ test('main', t => {
         end: {line: 2, column: 8}
       }
     })
-  } catch (error) {}
+  } catch (_) {}
 
   t.is(
     m([file]),
