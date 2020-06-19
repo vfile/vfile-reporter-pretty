@@ -8,7 +8,7 @@ var pretty = require('.')
 // https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93
 var cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
-test('main', function(t) {
+test('main', function (t) {
   var fp = path.join('~', 'example.md')
   var file = vfile({path: fp})
 

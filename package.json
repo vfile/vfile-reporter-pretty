@@ -37,18 +37,18 @@
     "vfile-to-eslint": "^2.0.0"
   },
   "devDependencies": {
-    "chalk": "^3.0.0",
-    "log-symbols": "^3.0.0",
+    "chalk": "^4.0.0",
+    "log-symbols": "^4.0.0",
     "nyc": "^15.0.0",
-    "prettier": "^1.0.0",
-    "remark-cli": "^7.0.0",
-    "remark-preset-wooorm": "^6.0.0",
-    "tape": "^4.0.0",
+    "prettier": "^2.0.0",
+    "remark-cli": "^8.0.0",
+    "remark-preset-wooorm": "^7.0.0",
+    "tape": "^5.0.0",
     "vfile": "^4.0.0",
-    "xo": "^0.27.0"
+    "xo": "^0.32.0"
   },
   "scripts": {
-    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+    "format": "remark . -qfo && prettier . --write && xo --fix",
     "test-api": "node test",
     "test-coverage": "nyc --reporter lcov node test.js",
     "test": "npm run format && npm run test-coverage"
@@ -69,7 +69,10 @@
   },
   "xo": {
     "prettier": true,
-    "esnext": false
+    "esnext": false,
+    "rules": {
+      "unicorn/prefer-optional-catch-binding": "off"
+    }
   },
   "remarkConfig": {
     "plugins": [
