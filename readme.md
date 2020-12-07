@@ -61,9 +61,9 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/vfile/vfile-reporter-pretty.svg
+[build-badge]: https://github.com/vfile/vfile-reporter-pretty/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/vfile/vfile-reporter-pretty
+[build]: https://github.com/vfile/vfile-reporter-pretty/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/vfile/vfile-reporter-pretty.svg
 
