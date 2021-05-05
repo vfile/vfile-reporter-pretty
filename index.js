@@ -1,6 +1,6 @@
-'use strict'
+import {toESLint} from 'vfile-to-eslint'
+import pretty from 'eslint-formatter-pretty'
 
-const vfileToEslint = require('vfile-to-eslint')
-const eslintFormatterPretty = require('eslint-formatter-pretty')
-
-module.exports = (vfiles) => eslintFormatterPretty(vfileToEslint(vfiles))
+export function reporterPretty(vfiles) {
+  return pretty(toESLint(vfiles))
+}

@@ -13,6 +13,9 @@ Create a pretty report for a **[vfile][]**.
 
 ## Install
 
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
+Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -22,10 +25,10 @@ npm install vfile-reporter-pretty
 ## Use
 
 ```js
-const vfile = require('vfile')
-const vfileReporterPretty = require('vfile-reporter-pretty')
+import {VFile} from 'vfile'
+import {reporterPretty} from 'vfile-reporter-pretty'
 
-const file = vfile({path: '~/example.md'})
+const file = new VFile({path: '~/example.md'})
 
 file.message('`braavo` is misspelt; did you mean `bravo`?', {line: 1, column: 8})
 file.info('This is perfect', {line: 2, column: 1})
@@ -34,10 +37,15 @@ try {
   file.fail('This is horrible', {line: 3, column: 5})
 } catch (error) {}
 
-console.log(vfileReporterPretty([file]))
+console.log(reporterPretty([file]))
 ```
 
-### `vfileReporterPretty(files)`
+## API
+
+This package exports the following identifiers: `reporterPretty`.
+There is no default export.
+
+### `reporterPretty(files)`
 
 Create a report (`string`) for the given files.
 

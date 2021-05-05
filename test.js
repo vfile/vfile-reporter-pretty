@@ -1,16 +1,16 @@
-var path = require('path')
-var test = require('tape')
-var vfile = require('vfile')
-var symbols = require('log-symbols')
-var chalk = require('chalk')
-var pretty = require('.')
+import path from 'path'
+import test from 'tape'
+import {VFile} from 'vfile'
+import symbols from 'log-symbols'
+import chalk from 'chalk'
+import {reporterPretty} from './index.js'
 
 // https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93
-var cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
+const cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
-test('main', function (t) {
-  var fp = path.join('~', 'example.md')
-  var file = vfile({path: fp})
+test('reporterPretty', (t) => {
+  const fp = path.join('~', 'example.md')
+  const file = new VFile({path: fp})
 
   file.info('This is perfect', {line: 5, column: 3}, 'alpha:bravo')
 
@@ -28,10 +28,10 @@ test('main', function (t) {
         end: {line: 2, column: 8}
       }
     })
-  } catch (_) {}
+  } catch {}
 
   t.is(
-    pretty([file]),
+    reporterPretty([file]),
     [
       '',
       cwd + '  ' + chalk.underline(fp) + chalk.hidden.dim.gray(':2:1'),
