@@ -12,3 +12,5 @@ import pretty from 'eslint-formatter-pretty'
 export function reporterPretty(vfiles) {
   return pretty(toESLint(vfiles))
 }
+
+export default reporterPretty

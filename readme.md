@@ -43,7 +43,7 @@ console.log(reporterPretty([file]))
 ## API
 
 This package exports the following identifiers: `reporterPretty`.
-There is no default export.
+That identifier is also the default export.
 
 ### `reporterPretty(files)`
 
