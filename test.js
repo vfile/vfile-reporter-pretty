@@ -1,4 +1,5 @@
-import path from 'path'
+import path from 'node:path'
+import process from 'node:process'
 import test from 'tape'
 import {VFile} from 'vfile'
 import symbols from 'log-symbols'
