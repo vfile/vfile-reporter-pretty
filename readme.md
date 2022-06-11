@@ -51,7 +51,7 @@ Create a report (`string`) for the given files.
 
 ###### `files`
 
-List of files ([`Array.<VFile>`][vfile]).
+List of files ([`Array<VFile>`][vfile]).
 
 ## Contribute
 
