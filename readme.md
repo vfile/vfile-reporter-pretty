@@ -7,19 +7,54 @@
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-Create a pretty report for a **[vfile][]**.
+[vfile][] utility to create a pretty report.
 
 ![][screenshot]
 
+## Contents
+
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`reporterPretty(files)`](#reporterprettyfiles)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Contribute](#contribute)
+*   [License](#license)
+
+## What is this?
+
+This package is like [`vfile-reporter`][vfile-reporter] but a bit prettier.
+
+## When should I use this?
+
+You can use this when you like
+[`eslint-formatter-pretty`][eslint-formatter-pretty], use `vfile-reporter`
+itself otherwise.
+
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
-Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
 npm install vfile-reporter-pretty
+```
+
+In Deno with [`esm.sh`][esmsh]:
+
+```js
+import {reporterPretty} from 'https://esm.sh/vfile-reporter-pretty@6'
+```
+
+In browsers with [`esm.sh`][esmsh]:
+
+```html
+<script type="module">
+  import {reporterPretty} from 'https://esm.sh/vfile-reporter-pretty@6?bundle'
+</script>
 ```
 
 ## Use
@@ -42,7 +77,7 @@ console.log(reporterPretty([file]))
 
 ## API
 
-This package exports the following identifiers: `reporterPretty`.
+This package exports the identifier `reporterPretty`.
 That identifier is also the default export.
 
 ### `reporterPretty(files)`
@@ -52,6 +87,18 @@ Create a report (`string`) for the given files.
 ###### `files`
 
 List of files ([`Array<VFile>`][vfile]).
+
+## Types
+
+This package is fully typed with [TypeScript][].
+It exports no additional types.
+
+## Compatibility
+
+Projects maintained by the unified collective are compatible with all maintained
+versions of Node.js.
+As of now, that is Node.js 12.20+, 14.14+, 16.0+, and 18.0+.
+Our projects sometimes work with older versions, but this is not guaranteed.
 
 ## Contribute
 
@@ -93,13 +140,19 @@ abide by its terms.
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[contributing]: https://github.com/vfile/.github/blob/HEAD/contributing.md
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 
-[support]: https://github.com/vfile/.github/blob/HEAD/support.md
+[esmsh]: https://esm.sh
+
+[typescript]: https://www.typescriptlang.org
+
+[contributing]: https://github.com/vfile/.github/blob/main/contributing.md
+
+[support]: https://github.com/vfile/.github/blob/main/support.md
 
 [health]: https://github.com/vfile/.github
 
-[coc]: https://github.com/vfile/.github/blob/HEAD/code-of-conduct.md
+[coc]: https://github.com/vfile/.github/blob/main/code-of-conduct.md
 
 [license]: license
 
@@ -108,3 +161,7 @@ abide by its terms.
 [screenshot]: screenshot.png
 
 [vfile]: https://github.com/vfile/vfile
+
+[vfile-reporter]: https://github.com/vfile/vfile-reporter
+
+[eslint-formatter-pretty]: https://github.com/sindresorhus/eslint-formatter-pretty
