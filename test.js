@@ -6,11 +6,18 @@ import {VFile} from 'vfile'
 import symbols from 'log-symbols'
 import chalk from 'chalk'
 import {reporterPretty} from './index.js'
+import * as mod from './index.js'
 
 // https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93
 const cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
 test('reporterPretty', () => {
+  assert.deepEqual(
+    Object.keys(mod).sort(),
+    ['default', 'reporterPretty'],
+    'should expose the public api'
+  )
+
   const fp = path.join('~', 'example.md')
   const file = new VFile({path: fp})
 
