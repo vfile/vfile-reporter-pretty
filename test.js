@@ -1,6 +1,7 @@
+import assert from 'node:assert/strict'
 import path from 'node:path'
 import process from 'node:process'
-import test from 'tape'
+import test from 'node:test'
 import {VFile} from 'vfile'
 import symbols from 'log-symbols'
 import chalk from 'chalk'
@@ -9,7 +10,7 @@ import {reporterPretty} from './index.js'
 // https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93
 const cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
-test('reporterPretty', (t) => {
+test('reporterPretty', () => {
   const fp = path.join('~', 'example.md')
   const file = new VFile({path: fp})
 
@@ -31,7 +32,7 @@ test('reporterPretty', (t) => {
     })
   } catch {}
 
-  t.is(
+  assert.equal(
     reporterPretty([file]),
     [
       '',
@@ -58,6 +59,4 @@ test('reporterPretty', (t) => {
       ''
     ].join('\n')
   )
-
-  t.end()
 })
