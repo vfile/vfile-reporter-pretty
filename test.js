@@ -5,14 +5,14 @@ import test from 'node:test'
 import {VFile} from 'vfile'
 import symbols from 'log-symbols'
 import chalk from 'chalk'
-import {reporterPretty} from './index.js'
+import {reporterPretty} from 'vfile-reporter-pretty'
 
 // https://github.com/sindresorhus/eslint-formatter-pretty/blob/159b30a/index.js#L90-L93
 const cwd = process.env.CI ? '' : `\u001B]50;CurrentDir=${process.cwd()}\u0007`
 
 test('reporterPretty', async function () {
   assert.deepEqual(
-    Object.keys(await import('./index.js')).sort(),
+    Object.keys(await import('vfile-reporter-pretty')).sort(),
     ['default', 'reporterPretty'],
     'should expose the public api'
   )
