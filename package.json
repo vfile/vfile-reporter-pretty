@@ -39,9 +39,9 @@
     "index.js"
   ],
   "dependencies": {
-    "eslint-formatter-pretty": "^4.0.0",
-    "vfile": "^5.0.0",
-    "vfile-to-eslint": "^3.0.0"
+    "eslint-formatter-pretty": "^5.0.0",
+    "vfile": "^6.0.0",
+    "vfile-to-eslint": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

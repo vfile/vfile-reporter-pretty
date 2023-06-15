@@ -30,9 +30,7 @@ test('reporterPretty', () => {
 
   try {
     file.fail('This is horrible', {
-      type: 'charlie',
-      value: 'bravo',
-      position: {
+      place: {
         start: {line: 2, column: 1},
         end: {line: 2, column: 8}
       }
