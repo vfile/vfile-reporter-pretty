@@ -3,6 +3,7 @@
 [![Build][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 [![Sponsors][sponsors-badge]][collective]
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
@@ -37,7 +38,7 @@ itself otherwise.
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 14.14+ and 16.0+), install with [npm][]:
+In Node.js (version 16+), install with [npm][]:
 
 ```sh
 npm install vfile-reporter-pretty
@@ -100,10 +101,13 @@ It exports no additional types.
 
 ## Compatibility
 
-Projects maintained by the unified collective are compatible with all maintained
+Projects maintained by the unified collective are compatible with maintained
 versions of Node.js.
-As of now, that is Node.js 14.14+ and 16.0+.
-Our projects sometimes work with older versions, but this is not guaranteed.
+
+When we cut a new major release, we drop support for unmaintained versions of
+Node.
+This means we try to keep the current release line, `vfile-reporter-pretty@^6`,
+compatible with Node.js 12.
 
 ## Contribute
 
@@ -132,6 +136,10 @@ abide by its terms.
 [downloads-badge]: https://img.shields.io/npm/dm/vfile-reporter-pretty.svg
 
 [downloads]: https://www.npmjs.com/package/vfile-reporter-pretty
+
+[size-badge]: https://img.shields.io/badge/dynamic/json?label=minzipped%20size&query=$.size.compressedSize&url=https://deno.bundlejs.com/?q=vfile-reporter-pretty
+
+[size]: https://bundlejs.com/?q=vfile-reporter-pretty
 
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
 
