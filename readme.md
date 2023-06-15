@@ -47,14 +47,14 @@ npm install vfile-reporter-pretty
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {reporterPretty} from 'https://esm.sh/vfile-reporter-pretty@6'
+import {reporterPretty} from 'https://esm.sh/vfile-reporter-pretty@7'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {reporterPretty} from 'https://esm.sh/vfile-reporter-pretty@6?bundle'
+  import {reporterPretty} from 'https://esm.sh/vfile-reporter-pretty@7?bundle'
 </script>
 ```
 
